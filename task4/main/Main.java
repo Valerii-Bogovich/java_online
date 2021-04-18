@@ -1,5 +1,9 @@
 package by.epam.jonline.basics_of_oop.task4.main;
 
+import by.epam.jonline.basics_of_oop.task4.dao.TreasureDao;
+import by.epam.jonline.basics_of_oop.task4.view.View;
+import by.epam.jonline.basics_of_oop.task4.logic.Logic;
+
 /*Создать консольное приложение, удовлетворяющее следующим требованиям:
 • Приложение должно быть объектно-, а не процедурно-ориентированным.
 • Каждый класс должен иметь отражающее смысл название и информативный состав.
@@ -15,7 +19,9 @@ package by.epam.jonline.basics_of_oop.task4.main;
 public class Main {
 
 	public static void main(String[] args) {
-		
+		TreasureDao trDao = new TreasureDao();
+
+		View.printListOfTheMostExpensiveTreasures(Logic.getTheMostExpensiveTreasure());
 	}
 
 }

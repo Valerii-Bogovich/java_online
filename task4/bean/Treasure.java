@@ -76,7 +76,7 @@ public class Treasure implements Comparable<Treasure> {
 
 	@Override
 	public String toString() {
-		return name + " " + price ;
+		return index + " " + name + " " + price ;
 	}
 
 	@Override

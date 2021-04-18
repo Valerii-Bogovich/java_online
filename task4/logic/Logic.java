@@ -1,5 +1,6 @@
 package by.epam.jonline.basics_of_oop.task4.logic;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import by.epam.jonline.basics_of_oop.task4.bean.Treasure;
@@ -9,10 +10,9 @@ public class Logic {
 	private static TreasureDao trDao = new TreasureDao();
 	private static List<Treasure> listOfTreasures = trDao.getListOfTreasures();
 	
-	public static Treasure getTheMostExpensiveTreasure() {
-		
+	public static List<Treasure> getTheMostExpensiveTreasure() {
+		List<Treasure> listOfTheMostExpensiveTreasures = new ArrayList();
 		Treasure mostExpensiveTreasure = null;
-		double max = 0;
 		
 		for (Treasure treasure : listOfTreasures) {
 			if (treasure.compareTo(mostExpensiveTreasure) > 0) {
@@ -20,11 +20,18 @@ public class Logic {
 			}
 		}
 		
-		return mostExpensiveTreasure;
+		for (Treasure treasure : listOfTreasures) {
+			if (treasure.compareTo(mostExpensiveTreasure) == 0) {
+				listOfTheMostExpensiveTreasures.add(treasure);
+			}
+		}
+		
+		return listOfTheMostExpensiveTreasures;
 	}
 
 	
-	public static double getTreasuresForGivenAmount(double givenSum) {
+	public static List<Treasure> getTreasuresForGivenAmount(double givenSum) {
+		List<Treasure> listOfTheTreasuresForAGivenSum = new ArrayList();
 		double sum = 0;
 		
 		for (Treasure treasure : listOfTreasures) {
@@ -32,14 +39,13 @@ public class Logic {
 				break;
 			 else 
 				sum += treasure.getPrice();
+			listOfTheTreasuresForAGivenSum.add(treasure);
 			
 		}
 		
-		return sum;
+		return listOfTheTreasuresForAGivenSum;
 	}
 	
-	public static void main(String[] args) {
-		getTheMostExpensiveTreasure();
-	}
+
 
 }

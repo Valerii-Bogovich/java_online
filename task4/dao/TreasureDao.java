@@ -31,9 +31,7 @@ public class TreasureDao extends AbstractTreasureDao {
 		
 	}
 
-	public  void main(String[] args) {
-		getListOfTreasures();
-	}
+	
 	
 	
 	
