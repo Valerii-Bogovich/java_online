@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+<Student>
+<id>1</id>
+<name>Kolya</name>
+<age>20</age>
+<note>fhfjhfj</note>
+</Student>
+<Student>
+<id>2</id>
+<name>Olia</name>
+<age>18</age>
+<note>kjasdajasd</note>
+</Student>
+<Student>
+<id>3</id>
+<name>Sergei</name>
+<age>19</age>
+<note>kjasddasdfajasd</note>
+<Student>
+<Students>
